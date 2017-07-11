@@ -39,8 +39,8 @@ class AboutActivity : BaseActivity(), AboutContract.View {
 //            presenter.createSampleDataNoInjection()
         }
         restTestButton.setOnClickListener {
-//            presenter.testQueryWebServiceCall() // simple rest call
-            presenter.testQueryWebServiceCallRx() // use Rx to make the call
+            presenter.testQueryWebServiceCall() // simple rest call
+//            presenter.testQueryWebServiceCallRx() // use Rx to make the call
 //            presenter.testSaveQueryWebServiceCall() // write the response to file, the read the file to show results
 //            presenter.testFullUrlQueryWebServiceCall() //  simple call using the full URL instead of an endpoint
         }

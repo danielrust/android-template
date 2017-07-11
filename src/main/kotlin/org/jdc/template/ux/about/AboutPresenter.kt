@@ -3,8 +3,6 @@ package org.jdc.template.ux.about
 import android.app.Application
 import android.widget.Toast
 import com.google.android.gms.analytics.HitBuilders
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.experimental.Job
 import okhttp3.ResponseBody
 import org.dbtools.android.domain.DBToolsTableChangeListener
@@ -27,7 +25,6 @@ import org.jdc.template.model.type.IndividualType
 import org.jdc.template.model.webservice.colors.ColorService
 import org.jdc.template.model.webservice.colors.dto.DtoColors
 import org.jdc.template.ui.mvp.BasePresenter
-import org.jdc.template.util.RxUtil
 import org.jdc.template.util.WebServiceUtil
 import org.threeten.bp.LocalDate
 import org.threeten.bp.LocalTime
@@ -209,17 +206,17 @@ constructor(private val analytics: Analytics,
      * Simple web service call using Rx
      */
     fun testQueryWebServiceCallRx() {
-        RxUtil.toRetrofitObservable(colorService.colors())
-                .subscribeOn(Schedulers.io())
-                .map({ response ->
-                    RxUtil.verifyRetrofitResponse(response)
-
-                })
-                .filter({ dtoSearchResponse -> dtoSearchResponse != null }) // don't continue if null
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ dtoSearchResponse -> processSearchResponse(dtoSearchResponse!!) },
-                        { _ -> bus.post(SampleEvent(false, null)) },
-                        { bus.post(SampleEvent(true, null)) })
+//        RxUtil.toRetrofitObservable(colorService.colors())
+//                .subscribeOn(Schedulers.io())
+//                .map({ response ->
+//                    RxUtil.verifyRetrofitResponse(response)
+//
+//                })
+//                .filter({ dtoSearchResponse -> dtoSearchResponse != null }) // don't continue if null
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe({ dtoSearchResponse -> processSearchResponse(dtoSearchResponse!!) },
+//                        { _ -> bus.post(SampleEvent(false, null)) },
+//                        { bus.post(SampleEvent(true, null)) })
     }
 
     /**
