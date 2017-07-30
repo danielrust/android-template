@@ -1,6 +1,6 @@
 buildscript {
     ext.kotlin_version = '1.1.3-2'
-    ext.dbtoolsVersion = '9.0.0'
+    ext.dbtoolsVersion = '10.0.1'
 
     repositories {
         mavenLocal()

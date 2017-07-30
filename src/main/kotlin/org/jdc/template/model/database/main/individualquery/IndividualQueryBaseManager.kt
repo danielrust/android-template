@@ -17,12 +17,12 @@ import org.dbtools.android.domain.RxKotlinAndroidBaseManagerReadOnly
 @SuppressWarnings("all")
 abstract class IndividualQueryBaseManager (databaseManager: DatabaseManager) : RxKotlinAndroidBaseManagerReadOnly<IndividualQuery>(databaseManager) {
 
-     override val allColumns: Array<String> = IndividualQueryConst.ALL_COLUMNS
-     override val primaryKey = "<NO_PRIMARY_KEY_ON_QUERIES>"
-     override val dropSql = ""
-     override val createSql = ""
-     override val insertSql = ""
-     override val updateSql = ""
+    override val allColumns: Array<String> = IndividualQueryConst.ALL_COLUMNS
+    override val primaryKey = "<NO_PRIMARY_KEY_ON_QUERIES>"
+    override val dropSql = ""
+    override val createSql = ""
+    override val insertSql = ""
+    override val updateSql = ""
 
     override fun getDatabaseName() : String {
         return IndividualQueryConst.DATABASE

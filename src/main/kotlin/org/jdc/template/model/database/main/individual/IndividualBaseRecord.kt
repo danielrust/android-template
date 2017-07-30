@@ -20,24 +20,24 @@ import android.database.Cursor
 @SuppressWarnings("all")
 abstract class IndividualBaseRecord  : AndroidBaseRecord {
 
-     open var id: Long = 0
-     open var householdId: Long = 0
-     open var individualType: org.jdc.template.model.type.IndividualType = org.jdc.template.model.type.IndividualType.HEAD
-     open var individualTypeText: org.jdc.template.model.type.IndividualType = org.jdc.template.model.type.IndividualType.HEAD
-     open var firstName: String = ""
-     open var lastName: String = ""
-     open var birthDate: org.threeten.bp.LocalDate? = null
-     open var alarmTime: org.threeten.bp.LocalTime = org.threeten.bp.LocalTime.now()
-     open var lastModified: org.threeten.bp.LocalDateTime = org.threeten.bp.LocalDateTime.now()
-     open var sampleDateTime: org.threeten.bp.LocalDateTime? = null
-     open var sampleTimestamp: org.threeten.bp.LocalDateTime? = null
-     open var phone: String = ""
-     open var email: String = ""
-     open var available: Boolean = false
-     open var amount1: Float = 0.0f
-     open var amount2: Double = 0.0
-     open var enabled: Boolean = false
-     open var spouseIndividualId: Long? = null
+    open var id: Long = 0
+    open var householdId: Long = 0
+    open var individualType: org.jdc.template.model.type.IndividualType = org.jdc.template.model.type.IndividualType.HEAD
+    open var individualTypeText: org.jdc.template.model.type.IndividualType = org.jdc.template.model.type.IndividualType.HEAD
+    open var firstName: String = ""
+    open var lastName: String = ""
+    open var birthDate: org.threeten.bp.LocalDate? = null
+    open var alarmTime: org.threeten.bp.LocalTime = org.threeten.bp.LocalTime.now()
+    open var lastModified: org.threeten.bp.LocalDateTime = org.threeten.bp.LocalDateTime.now()
+    open var sampleDateTime: org.threeten.bp.LocalDateTime? = null
+    open var sampleTimestamp: org.threeten.bp.LocalDateTime? = null
+    open var phone: String = ""
+    open var email: String = ""
+    open var available: Boolean = false
+    open var amount1: Float = 0.0f
+    open var amount2: Double = 0.0
+    open var enabled: Boolean = false
+    open var spouseIndividualId: Long? = null
 
     constructor() {
     }

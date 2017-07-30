@@ -20,8 +20,8 @@ import android.database.Cursor
 @SuppressWarnings("all")
 abstract class HouseholdBaseRecord  : AndroidBaseRecord {
 
-     open var id: Long = 0
-     open var name: String = ""
+    open var id: Long = 0
+    open var name: String = ""
 
     constructor() {
     }

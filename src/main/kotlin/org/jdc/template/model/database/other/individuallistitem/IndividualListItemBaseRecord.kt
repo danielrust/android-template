@@ -10,19 +10,19 @@
 
 package org.jdc.template.model.database.other.individuallistitem
 
-import org.dbtools.android.domain.AndroidBaseRecord
-import org.dbtools.android.domain.database.statement.StatementWrapper
-import org.dbtools.android.domain.database.contentvalues.DBToolsContentValues
 import android.database.Cursor
+import org.dbtools.android.domain.AndroidBaseRecord
+import org.dbtools.android.domain.database.contentvalues.DBToolsContentValues
+import org.dbtools.android.domain.database.statement.StatementWrapper
 
 
 @Suppress("LeakingThis", "unused", "RemoveEmptySecondaryConstructorBody", "ConvertSecondaryConstructorToPrimary")
 @SuppressWarnings("all")
 abstract class IndividualListItemBaseRecord  : AndroidBaseRecord {
 
-     open var id: Long = 0
-     open var listId: Long = 0
-     open var individualId: Long = 0
+    open var id: Long = 0
+    open var listId: Long = 0
+    open var individualId: Long = 0
 
     constructor() {
     }

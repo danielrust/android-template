@@ -17,12 +17,12 @@ import org.dbtools.android.domain.RxKotlinAndroidBaseManagerWritable
 @SuppressWarnings("all")
 abstract class IndividualListBaseManager (databaseManager: DatabaseManager) : RxKotlinAndroidBaseManagerWritable<IndividualList>(databaseManager) {
 
-     override val allColumns: Array<String> = IndividualListConst.ALL_COLUMNS
-     override val primaryKey = IndividualListConst.PRIMARY_KEY_COLUMN
-     override val dropSql = IndividualListConst.DROP_TABLE
-     override val createSql = IndividualListConst.CREATE_TABLE
-     override val insertSql = IndividualListConst.INSERT_STATEMENT
-     override val updateSql = IndividualListConst.UPDATE_STATEMENT
+    override val allColumns: Array<String> = IndividualListConst.ALL_COLUMNS
+    override val primaryKey = IndividualListConst.PRIMARY_KEY_COLUMN
+    override val dropSql = IndividualListConst.DROP_TABLE
+    override val createSql = IndividualListConst.CREATE_TABLE
+    override val insertSql = IndividualListConst.INSERT_STATEMENT
+    override val updateSql = IndividualListConst.UPDATE_STATEMENT
 
     override fun getDatabaseName() : String {
         return IndividualListConst.DATABASE

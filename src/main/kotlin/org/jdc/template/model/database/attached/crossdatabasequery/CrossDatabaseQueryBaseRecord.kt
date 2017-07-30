@@ -10,19 +10,19 @@
 
 package org.jdc.template.model.database.attached.crossdatabasequery
 
-import org.dbtools.android.domain.AndroidBaseRecord
-import org.dbtools.android.domain.database.statement.StatementWrapper
-import org.dbtools.android.domain.database.contentvalues.DBToolsContentValues
 import android.database.Cursor
+import org.dbtools.android.domain.AndroidBaseRecord
+import org.dbtools.android.domain.database.contentvalues.DBToolsContentValues
+import org.dbtools.android.domain.database.statement.StatementWrapper
 
 
 @Suppress("LeakingThis", "unused", "RemoveEmptySecondaryConstructorBody", "ConvertSecondaryConstructorToPrimary")
 @SuppressWarnings("all")
 abstract class CrossDatabaseQueryBaseRecord  : AndroidBaseRecord {
 
-     open var id: Long = 0
-     open var name: String = ""
-     open var type: org.jdc.template.model.type.LocationType = org.jdc.template.model.type.LocationType.HOME
+    open var id: Long = 0
+    open var name: String = ""
+    open var type: org.jdc.template.model.type.LocationType = org.jdc.template.model.type.LocationType.HOME
 
     constructor() {
     }

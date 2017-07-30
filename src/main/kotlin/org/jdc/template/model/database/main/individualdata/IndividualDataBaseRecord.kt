@@ -20,9 +20,9 @@ import android.database.Cursor
 @SuppressWarnings("all")
 abstract class IndividualDataBaseRecord  : AndroidBaseRecord {
 
-     open var externalId: Long = 0
-     open var typeId: Int = 0
-     open var name: String = ""
+    open var externalId: Long = 0
+    open var typeId: Int = 0
+    open var name: String = ""
 
     constructor() {
     }

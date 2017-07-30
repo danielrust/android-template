@@ -9,20 +9,20 @@
 
 package org.jdc.template.model.database.main.household
 
-import org.jdc.template.model.database.DatabaseManager
 import org.dbtools.android.domain.RxKotlinAndroidBaseManagerWritable
+import org.jdc.template.model.database.DatabaseManager
 
 
 @Suppress("unused")
 @SuppressWarnings("all")
 abstract class HouseholdBaseManager (databaseManager: DatabaseManager) : RxKotlinAndroidBaseManagerWritable<Household>(databaseManager) {
 
-     override val allColumns: Array<String> = HouseholdConst.ALL_COLUMNS
-     override val primaryKey = HouseholdConst.PRIMARY_KEY_COLUMN
-     override val dropSql = HouseholdConst.DROP_TABLE
-     override val createSql = HouseholdConst.CREATE_TABLE
-     override val insertSql = HouseholdConst.INSERT_STATEMENT
-     override val updateSql = HouseholdConst.UPDATE_STATEMENT
+    override val allColumns: Array<String> = HouseholdConst.ALL_COLUMNS
+    override val primaryKey = HouseholdConst.PRIMARY_KEY_COLUMN
+    override val dropSql = HouseholdConst.DROP_TABLE
+    override val createSql = HouseholdConst.CREATE_TABLE
+    override val insertSql = HouseholdConst.INSERT_STATEMENT
+    override val updateSql = HouseholdConst.UPDATE_STATEMENT
 
     override fun getDatabaseName() : String {
         return HouseholdConst.DATABASE
