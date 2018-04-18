@@ -2,11 +2,12 @@ node {
     try{
         stage('Build'){
             checkout scm
+            currentBuild.result = "SUCCESS"
         }
     }catch (e) {
         currentBuild.result = "FAILED"
         throw e
       } finally {
-        notifyBuild(currentBuild.result)
+        echo currentBuild.result
     }
 }
