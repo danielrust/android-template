@@ -1,6 +1,8 @@
 pipeline{
-node('android'){
+    agent any
+
     checkout scm
+    stages{
     stage('Build'){
         try{
             sh './gradlew clean assembleAlpha testAlphaUnitTest lintAlpha'
