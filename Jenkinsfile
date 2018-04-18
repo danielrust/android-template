@@ -1,7 +1,7 @@
 pipeline{
     agent any
 
-    checkout scm
+checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/danielrust/android-template.git']]])
     stages{
     stage('Build'){
         try{
