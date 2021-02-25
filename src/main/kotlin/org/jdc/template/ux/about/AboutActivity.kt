@@ -2,12 +2,9 @@ package org.jdc.template.ux.about
 
 import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
-import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
-import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 import me.eugeniomarletti.extras.ActivityCompanion
 import org.jdc.template.R
 import org.jdc.template.databinding.AboutActivityBinding
@@ -46,17 +43,16 @@ class AboutActivity : BaseActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.menu_item_licenses -> {
-                OssLicensesMenuActivity.setActivityTitle(getString(R.string.menu_lib_licenses))
-                startActivity(Intent(this, OssLicensesMenuActivity::class.java))
-            }
-            else -> return super.onOptionsItemSelected(item)
-        }
-
-        return true
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when (item.itemId) {
+//            R.id.menu_item_licenses -> {
+//                // removed because this now shows more than run-time libraries and potentially has compile issue between 0.9.1 and 0.9.2
+//                OssLicensesMenuActivity.setActivityTitle(getString(R.string.menu_lib_licenses))
+//                startActivity(Intent(this, OssLicensesMenuActivity::class.java))
+//            }
+//            else -> return super.onOptionsItemSelected(item)
+//        }
+//    }
 
     companion object : ActivityCompanion<IntentOptions>(IntentOptions, AboutActivity::class)
 
