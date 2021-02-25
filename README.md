@@ -6,27 +6,35 @@ Sample Android app that utilizes common best practices
 **Features**
 
 * Kotlin
-* Android Architecture Components (ViewModel, LiveData, Room ORM Database)
-* Android DataBinding
-* Dagger 2.0 dependency injection
 * Kotlin Coroutines
-* ThreeTenBp
+* Kotlin Serialization (json)
+* Kotlin Gradle support (build.gradle.kts)
+* Android Architecture Components
+    * ViewModel
+    * Flow/LiveData
+    * Room
+    * Navigation
+    * WorkManager
+    * Data Binding / View Binding
+* Dagger dependency injection using Jetpack Hilt
+* Material styles and themes
+* Fragment, ViewModel, Worker constructor Injection support
+* CoreLibraryDesugaring (support java.time)
 * Constraint Layout
-* RecyclerView / RecyclerDiffAdapter / ViewHolder
+* RecyclerView / ListAdapter / ViewHolder
 * Retrofit / Okhttp3
-* Gson
-* Android-Job
 * Espresso Tests
 * JUnit tests / mockito
 * Timber
 * Firebase Analytics
-* Multidex
+* Gradle Play Publisher (Triple-T)
+* Detekt
 
 
 License
 =======
 
-    Copyright 2014 Jeff Campbell
+    Copyright 2014-2021 Jeff Campbell
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
